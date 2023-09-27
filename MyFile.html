@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Player" id="player">
+        <audio src="http://webplusdevelopers.com/demo/media/legacy.mp3" 
+               v-el:audio></audio>
+        
+        <div class="Player__cover" @click="hideText">
+          <div class="Player__lyrics">
+            <div class="line"
+                 v-if="lyrics.show" 
+                 v-text="lyrics.currentLine"></div>
+          </div>
+        </div>
+        
+        <div class="Player__track"
+             :style="{ width: song.progress + '%' }"></div>
+        
+        <div class="Player__details">
+          <div class="title" 
+               v-text="song.title + ' - ' + song.artist"></div>
+        </div>
+        
+        <div class="Player__controls">
+          <i class="disabled icon previous material-icons">skip_previous</i>
+          <i class="icon play material-icons" 
+             v-text="playing ? 'pause_circle_filled' : 'play_circle_filled'"
+             @click="togglePlayback"></i>
+          <i class="disabled icon next material-icons">skip_next</i>
+        </div>
+      </div>
+</body>
+</html>

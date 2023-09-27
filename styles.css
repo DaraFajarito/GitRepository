@@ -6,95 +6,57 @@
 }
 
 body, html  {
-  padding: 0;
-  margin: 0;
-  height: 100%;
   font-family: Roboto, sans-serif;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.Player {
-  width: 300px;
-  height: 425px;
-  box-shadow: 0 0 5px #BBB;
-}
-
-.Player__cover {
-  width: 300px;
-  height: 300px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/en/8/87/The_Marshall_Mathers_LP_2.png');
-}
-
-.Player__lyrics {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  
-  justify-content: center;
-  align-items: flex-end;
-  
-  .line {
+.centered-card {
     display: flex;
-    margin-bottom: 20px;
-    width: 90%;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 3px;
-    padding: 8px 10px;
-    font-size: 13px;
-    line-height: 16px;
-    
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
+    align-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-.Player__track {
-  width: 0%;
-  height: 3px;
-  background-color:black;
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-.Player__details {
-  padding: 12px 20px;
-  
-  .title {
-    text-align: center;
+.card1 {
+    background-image: url(https://media.istockphoto.com/id/1218394968/photo/pastel-sky-and-cloud.jpg?s=612x612&w=0&k=20&c=tht9eIx4nCUJjO6087NH1ud2T8R2MOjg3BIRrrNo8g0=);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-content {
+    margin-top: 20px;
+}
+
+.card-content h2 {
     font-size: 20px;
-  }
+    margin-bottom: 10px;
 }
 
-.Player__controls {
-  display: flex;
-  width: 100%;
-  margin-top: 3px;
-  
-  justify-content: center;
-  align-items: center;
-  
-  .icon {
-    cursor: pointer;
-    font-size: 36px;
-    -webkit-user-select: none;
-    
-    &.disabled {
-      color: #AAA;
-      cursor: default;
-    }
-   
-    &.play {
-        margin-left: 10px;
-        margin-right: 10px;
-        
-        font-size: 54px;
-        color: black;
-    }
-  }
-
+.card-content p {
+    font-size: 16px;
+    color: #333;
 }
+
